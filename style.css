@@ -1,0 +1,54 @@
+/*Media Queries*/
+/* 950px(genel) 740px(header değişmiyo) 550px (genel)*/
+
+/* reset */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 36px;
+    padding-top: 8px;
+    margin: 0px 56px;
+    margin-top: 20px;
+}
+
+.header-logo {
+    max-height: 100%;
+}
+
+.select-language {
+    
+}
+
+/* reset select */
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    width: 100%;
+}
+
+.select-wrapper {
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+.select-wrapper:before {
+    content: "";
+    display: block;
+    background: url("img/world-icon.png") no-repeat;
+    transform: scale(.5);
+    width: 100px;
+    height: 100px;
+    float: left;
+}

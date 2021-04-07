@@ -7,48 +7,201 @@ html, body {
     padding: 0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Font */
+@font-face {
+    font-family: Netflix-sans;
+    /* src: url("font/NetflixSans_W_Th.woff2"); */
+    src: url("font/ttf/NetflixSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: Netflix-sans-thin;
+    /* src: url("font/NetflixSans_W_Th.woff2"); */
+    src: url("font/ttf/NetflixSans-Thin.ttf");
+}
+
+/* Font for Form elements*/
+input, textarea, button, select {font-family: inherit;}
+
 body {
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    /* font-family: 'Helvetica', 'Arial', sans-serif; */
+    font-family: 'Netflix-sans', 'Helvetica', sans-serif;
+}
+
+.margin-left-right{
+    margin-left: 56px;
+    margin-right: 56px;
+}
+
+.upface {
+    height: 100vh;
+    background-image: url("img/upface-bg-dark.png");
+    overflow: hidden;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    height: 36px;
+    height: 44px;
     padding-top: 8px;
-    margin: 0px 56px;
     margin-top: 20px;
+    font-family: "Netflix-sans-thin", sans-serif;
 }
 
 .header-logo {
     max-height: 100%;
 }
 
-.select-language {
-    
-}
-
 /* reset select */
 select {
     appearance: none;
+    -webkit-appearance:none;
     background-color: transparent;
     border: none;
-    padding: 0 1em 0 0;
-    width: 100%;
+    /* padding: 0 1em 0 0; */
 }
 
 .select-wrapper {
-    display: inline-block;
-    border: 2px solid black;
+    display: flex;
+    color: white;
+    border: 1px solid white;
     border-radius: 3px;
 }
 
+.select-wrapper select {
+    color: inherit;
+}
+
+
+/* select before icon */
 .select-wrapper:before {
     content: "";
-    display: block;
+    display: inline-block;
     background: url("img/world-icon.png") no-repeat;
-    transform: scale(.5);
-    width: 100px;
-    height: 100px;
-    float: left;
+    transform: scale(0.6);
+    width: 31px;
+    height: 31px;
+}
+
+.select-wrapper:after {
+    content: "";
+    display: inline-block;
+    background: url("img/arrow-down.png") no-repeat;
+    transform: scale(0.6);
+    width: 20px;
+    height: 20px;
+}
+
+.header-right {
+    display: flex;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.header-right * {
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    cursor: pointer;
+}
+
+.header-right *:focus{
+    outline: none;
+}
+
+
+.select-language {
+    font-weight: inherit;
+    letter-spacing: inherit;
+}
+
+.btn-signin {
+    border: none;
+    background-color: #E50914;
+    color: white;
+
+
+    margin-left: 1.5rem;
+    border-radius: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.showcase {
+    display: block;
+    color: white;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.showcase h1 {
+    font-size: 50px;
+    font-weight: 900;
+    max-width: 600px;
+    margin: auto;
+    line-height: 55px;
+}
+
+.showcase h2 {
+    font-size: 26px;
+    font-weight: 400;
+    max-width: 640px;
+    margin: auto;
+    line-height: 55px;
+}
+
+.showcase h3 {
+    font-size: 19.2px;
+    font-weight: 400;
+    
+    margin: auto;
+    line-height: 55px;
+}
+
+.email-input-box{
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.email-input-box input{
+    min-width: 450px;
+    height: 60px;
+    padding: 8px;
+    /* border: 10px black; */
+}
+
+.email-input-box ::placeholder{
+    font-size: 16px;
+}
+
+.email-input-box button{
+    font-size: 26px;
+    background-color: #F40612;
+    color: white;
+    border: none;
+    /* padding: 10px 30px 10px; */
+    width: 180px;
+    border-radius: 1px;
+
+}
+
+.email-input-box button::after{
+    content: "";
+    display: inline-block;
+    background: url("img/arrow-right.png") no-repeat;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background-size: 15px 15px;
+    margin-left: 10px;
 }

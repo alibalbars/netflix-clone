@@ -79,7 +79,6 @@ select {
     color: inherit;
 }
 
-
 /* select before icon */
 .select-wrapper:before {
     content: "";
@@ -175,7 +174,6 @@ select {
     min-width: 450px;
     height: 60px;
     padding: 8px;
-    /* border: 10px black; */
 }
 
 .email-input-box ::placeholder{
@@ -187,7 +185,6 @@ select {
     background-color: #F40612;
     color: white;
     border: none;
-    /* padding: 10px 30px 10px; */
     width: 180px;
     border-radius: 1px;
 }
@@ -202,3 +199,4 @@ select {
     background-size: 15px 15px;
     margin-left: 10px;
 }
+/*modified*/

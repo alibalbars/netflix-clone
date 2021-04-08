@@ -1,7 +1,9 @@
 /*Media Queries*/
+
 /* 950px(genel) 740px(header değişmiyo) 550px (genel)*/
 
 /* reset */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -9,9 +11,8 @@ html, body {
 
 * {
     box-sizing: border-box;
-    margin: 0; /* bura*/
+    margin: 0;
     padding: 0;
-
 }
 
 button {
@@ -19,6 +20,7 @@ button {
 }
 
 /* Font */
+
 @font-face {
     font-family: Netflix-sans;
     /* src: url("font/NetflixSans_W_Th.woff2"); */
@@ -32,24 +34,21 @@ button {
 }
 
 /* Font for Form elements*/
-input, textarea, button, select {font-family: inherit;}
+input, textarea, button, select {
+    font-family: inherit;
+}
 
 body {
     /* font-family: 'Helvetica', 'Arial', sans-serif; */
     font-family: 'Netflix-sans', 'Helvetica', sans-serif;
 }
 
-.margin-left-right{
+.margin-left-right {
     margin-left: 56px;
     margin-right: 56px;
 }
 
-.upface {
-    height: 100vh;
-    /* background-image: url("img/upface-bg-dark.png"); */
-    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url("img/upface-background.png");
-    overflow: hidden;
-}
+
 
 header {
     display: flex;
@@ -65,9 +64,10 @@ header {
 }
 
 /* reset select */
+
 select {
     appearance: none;
-    -webkit-appearance:none;
+    -webkit-appearance: none;
     background-color: transparent;
     border: none;
 }
@@ -84,11 +84,12 @@ select {
 }
 
 /* select before icon */
+
 .select-wrapper:before {
     content: "";
     display: inline-block;
     background: url("img/world-icon.png") no-repeat;
-    transform: scale(0.6);
+    transform: scale(0.5);
     width: 31px;
     height: 31px;
 }
@@ -116,7 +117,7 @@ select {
     cursor: pointer;
 }
 
-.header-right *:focus{
+.header-right *:focus {
     outline: none;
 }
 
@@ -129,8 +130,6 @@ select {
     border: none;
     background-color: #E50914;
     color: white;
-
-
     margin-left: 1.5rem;
     border-radius: 3px;
     padding-left: 15px;
@@ -163,23 +162,23 @@ select {
 .showcase h3 {
     font-size: 19.2px;
     font-weight: 400;
-    
     margin: auto;
     line-height: 55px;
 }
 
 /* E-mail input */
-.email-input-wrapper{
+
+.email-input-wrapper {
     margin: auto;
 }
 
-.email-input-box{
+.email-input-box {
     display: inline-flex;
     justify-content: center;
     position: relative;
 }
 
-.email-input-box input{
+.email-input-box input {
     box-sizing: border-box;
     min-width: 450px;
     height: 60px;
@@ -189,7 +188,7 @@ select {
     font-size: 16px;
 }
 
-.email-input-box label{
+.email-input-box label {
     position: absolute;
     left: 13px;
     top: 50%;
@@ -200,17 +199,17 @@ select {
     transition: transform .2s ease, font-size .2s;
 }
 
-.email-input-box input:focus + label {
+.email-input-box input:focus+label {
     transform: translateY(-1.8em);
     font-size: 13px;
 }
 
-.email-input-box input:not(:focus):not(:placeholder-shown) + label {
+.email-input-box input:not(:focus):not(:placeholder-shown)+label {
     transform: translateY(-1.8em);
     font-size: 13px;
 }
 
-.email-input-box button{
+.email-input-box button {
     font-size: 26px;
     background-color: #F40612;
     color: white;
@@ -219,7 +218,7 @@ select {
     border-radius: 1px;
 }
 
-.email-input-box button::after{
+.email-input-box button::after {
     content: "";
     display: inline-block;
     background: url("img/arrow-right.png") no-repeat;
@@ -228,4 +227,10 @@ select {
     height: 15px;
     background-size: 15px 15px;
     margin-left: 10px;
+}
+
+.upface {
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("img/upface-background.png");
+    overflow: hidden;
 }

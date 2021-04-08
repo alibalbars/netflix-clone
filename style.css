@@ -46,7 +46,8 @@ body {
 
 .upface {
     height: 100vh;
-    background-image: url("img/upface-bg-dark.png");
+    /* background-image: url("img/upface-bg-dark.png"); */
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url("img/upface-background.png");
     overflow: hidden;
 }
 

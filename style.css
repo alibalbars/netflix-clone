@@ -9,6 +9,9 @@ html, body {
 
 * {
     box-sizing: border-box;
+    margin: 0; /* bura*/
+    padding: 0;
+
 }
 
 button {
@@ -164,20 +167,46 @@ select {
     line-height: 55px;
 }
 
+/* E-mail input */
+.email-input-wrapper{
+    margin: auto;
+}
+
 .email-input-box{
-    display: flex;
+    display: inline-flex;
     justify-content: center;
- 
+    position: relative;
 }
 
 .email-input-box input{
+    box-sizing: border-box;
     min-width: 450px;
     height: 60px;
-    padding: 8px;
+    padding-left: 13px;
+    padding-top: 5px;
+    outline: none;
+    font-size: 16px;
 }
 
-.email-input-box ::placeholder{
+.email-input-box label{
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: grey;
     font-size: 16px;
+    font-weight: 300;
+    transition: transform .2s ease, font-size .2s;
+}
+
+.email-input-box input:focus + label {
+    transform: translateY(-1.8em);
+    font-size: 13px;
+}
+
+.email-input-box input:not(:focus):not(:placeholder-shown) + label {
+    transform: translateY(-1.8em);
+    font-size: 13px;
 }
 
 .email-input-box button{
@@ -199,4 +228,3 @@ select {
     background-size: 15px 15px;
     margin-left: 10px;
 }
-/*modified*/

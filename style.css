@@ -1,6 +1,10 @@
 /*Media Queries*/
-
 /* 950px(genel) 740px(header değişmiyo) 550px (genel)*/
+
+:root {
+    --divider-color: rgb(34, 34, 34);
+}
+
 
 /* reset */
 
@@ -74,13 +78,19 @@ select {
 
 .select-wrapper {
     display: flex;
+    width: 120px;
     color: white;
-    border: 1px solid white;
+    border: 0.5px solid white;
     border-radius: 3px;
+    align-items: center;
 }
 
 .select-wrapper select {
+
     color: inherit;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 14px;
 }
 
 /* select before icon */
@@ -90,6 +100,7 @@ select {
     display: inline-block;
     background: url("img/world-icon.png") no-repeat;
     transform: scale(0.5);
+    /* transform-origin: 50% 65%; */
     width: 31px;
     height: 31px;
 }
@@ -98,9 +109,10 @@ select {
     content: "";
     display: inline-block;
     background: url("img/arrow-down.png") no-repeat;
-    transform: scale(0.6);
-    width: 20px;
-    height: 20px;
+    transform: scale(0.5);
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
 }
 
 .header-right {
@@ -186,6 +198,12 @@ select {
     padding-top: 5px;
     outline: none;
     font-size: 16px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+}
+
+.email-input-box input:focus {
+    border: 1px solid #0071EB ;
 }
 
 .email-input-box label {
@@ -196,12 +214,14 @@ select {
     color: grey;
     font-size: 16px;
     font-weight: 300;
-    transition: transform .2s ease, font-size .2s;
+    transition: transform .1s ease, font-size .2s;
 }
 
-.email-input-box input:focus+label {
+.email-input-box input:focus + label {
     transform: translateY(-1.8em);
     font-size: 13px;
+    font-weight: 600;
+
 }
 
 .email-input-box input:not(:focus):not(:placeholder-shown)+label {
@@ -230,7 +250,70 @@ select {
 }
 
 .upface {
-    height: 100vh;
+    /* height: 100vh; */
+    height: 707px;
     background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("img/upface-background.png");
     overflow: hidden;
+    border-bottom: 8px solid var(--divider-color);
+}
+
+/* story-cards */
+
+.story-cards {
+    background-color: #000;
+    
+}
+
+
+.story-card-container {
+    border-bottom: 8px solid var(--divider-color);
+    padding: 70px 45px;
+    max-height: 465px;
+}
+
+.story-card{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+
+.story-card-image-container{
+    display: inline-block i !important;
+    position: relative;
+}
+
+
+.story-card-title{
+    font-size: 3.125rem;
+    max-width: 420px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 0 .4em;
+}
+
+.story-card-subtitle{
+    font-size: 1.625rem;
+    max-width: 500px;
+    margin: .75em 0 .25em;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.story-card-image {
+    transform: scale(.8);
+    transform-origin: 50% 0;
+    /* object-fit: fill; */
+    /* object-position: center top; */
+}
+
+.story-card-animation {
+    position: absolute;
+    left: 12.2%;
+    top: -6%;
+    z-index: 1;
+    transform: scale(0.78)
 }

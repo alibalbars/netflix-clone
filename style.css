@@ -279,8 +279,6 @@ select {
     margin: 0 auto;
 }
 
-
-
 .story-card-image-container{
     display: inline-block i !important;
     position: relative;
@@ -293,6 +291,7 @@ select {
     font-weight: 600;
     letter-spacing: 1px;
     margin: 0 0 .4em;
+    line-height: 1.1em;
 }
 
 .story-card-subtitle{
@@ -306,8 +305,8 @@ select {
 .story-card-image {
     transform: scale(.8);
     transform-origin: 50% 0;
-    /* object-fit: fill; */
-    /* object-position: center top; */
+    object-position: right center;
+    position: relative;
 }
 
 .story-card-animation {
@@ -316,4 +315,42 @@ select {
     top: -6%;
     z-index: 1;
     transform: scale(0.78)
+}
+
+.story-card2-animation {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    /* top: 0; */
+    bottom: 25%;
+    left: 25%;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: .75em;
+    width: 50%;
+    background-color: #000;
+    padding-right: 10px;
+    padding-left: 5px;
+    /* margin: 0 auto !important; */
+}
+
+
+.story-card2-animation::after {
+    content: "";
+    display: inline-block;
+    background: url("img/download-icon.gif") center center no-repeat;
+    transform: scale(.5);
+    width: 3em;
+    height: 3em;
+    margin-left: auto;
+}
+
+.story-card2-animation > * {
+    margin: 8px;
+}
+
+
+.story-card-animation-image img{
+    width: 50px;
+    height: 75px;
+    
 }

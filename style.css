@@ -1,10 +1,10 @@
 /*Media Queries*/
+
 /* 950px(genel) 740px(header değişmiyo) 550px (genel)*/
 
 :root {
     --divider-color: rgb(34, 34, 34);
 }
-
 
 /* reset */
 
@@ -38,6 +38,7 @@ button {
 }
 
 /* Font for Form elements*/
+
 input, textarea, button, select {
     font-family: inherit;
 }
@@ -51,8 +52,6 @@ body {
     margin-left: 56px;
     margin-right: 56px;
 }
-
-
 
 header {
     display: flex;
@@ -78,19 +77,26 @@ select {
 
 .select-wrapper {
     display: flex;
-    width: 120px;
+    /* width: 100px; */
     color: white;
     border: 0.5px solid white;
     border-radius: 3px;
+    outline: none;
     align-items: center;
+    justify-content: space-between;
 }
 
 .select-wrapper select {
-
     color: inherit;
     display: inline-block;
     white-space: nowrap;
     font-size: 14px;
+}
+
+.select-wrapper select option{
+    color: black;
+    padding: 5px;
+    margin: 5px;
 }
 
 /* select before icon */
@@ -99,19 +105,24 @@ select {
     content: "";
     display: inline-block;
     background: url("img/world-icon.png") no-repeat;
-    transform: scale(0.5);
+    background-size: cover;
+    /* transform: scale(0.5); */
     /* transform-origin: 50% 65%; */
-    width: 31px;
-    height: 31px;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px 0;
 }
 
 .select-wrapper:after {
     content: "";
     display: inline-block;
-    background: url("img/arrow-down.png") no-repeat;
-    transform: scale(0.5);
+    background: url("img/arrow-down.png") center center no-repeat;
+    transform: scale(0.4);
+    transform-origin: 50% 50%;
+    background-size: cover;
+
     cursor: pointer;
-    width: 14px;
+    width: 25px;
     height: 14px;
 }
 
@@ -203,7 +214,7 @@ select {
 }
 
 .email-input-box input:focus {
-    border: 1px solid #0071EB ;
+    border: 1px solid #0071EB;
 }
 
 .email-input-box label {
@@ -214,14 +225,13 @@ select {
     color: grey;
     font-size: 16px;
     font-weight: 300;
-    transition: transform .1s ease, font-size .2s;
+    transition: transform .05s ease, font-size .2s;
 }
 
-.email-input-box input:focus + label {
+.email-input-box input:focus+label {
     transform: translateY(-1.8em);
     font-size: 13px;
     font-weight: 600;
-
 }
 
 .email-input-box input:not(:focus):not(:placeholder-shown)+label {
@@ -231,11 +241,16 @@ select {
 
 .email-input-box button {
     font-size: 26px;
-    background-color: #F40612;
+    background-color: rgb(229, 9, 20);
     color: white;
     border: none;
     width: 180px;
-    border-radius: 1px;
+    border-radius: 0 2px 2px 0;
+    outline: none;
+}
+
+.email-input-box button:hover{
+    background-color: rgb(244, 6, 18);
 }
 
 .email-input-box button::after {
@@ -252,7 +267,7 @@ select {
 .upface {
     /* height: 100vh; */
     height: 707px;
-    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("img/upface-background.png");
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("img/upface-background.png") center center;
     overflow: hidden;
     border-bottom: 8px solid var(--divider-color);
 }
@@ -261,9 +276,7 @@ select {
 
 .story-cards {
     background-color: #000;
-    
 }
-
 
 .story-card-container {
     border-bottom: 8px solid var(--divider-color);
@@ -271,7 +284,7 @@ select {
     max-height: 465px;
 }
 
-.story-card{
+.story-card {
     display: flex;
     justify-content: space-between;
     color: white;
@@ -279,13 +292,26 @@ select {
     margin: 0 auto;
 }
 
-.story-card-image-container{
-    display: inline-block i !important;
+.story-card-image-container {
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    min-width: 500px;
+    background: url("img/storycard3.m4v");
+}
+
+.story-card-image {
+    transform: scale(.8);
+    transform-origin: 50% 0;
+    /* object-position: right center; */
     position: relative;
 }
 
+.story-card-text {
+    margin-top: 20px;
+}
 
-.story-card-title{
+.story-card-title {
     font-size: 3.125rem;
     max-width: 420px;
     font-weight: 600;
@@ -294,19 +320,12 @@ select {
     line-height: 1.1em;
 }
 
-.story-card-subtitle{
+.story-card-subtitle {
     font-size: 1.625rem;
     max-width: 500px;
     margin: .75em 0 .25em;
     font-weight: 400;
     line-height: normal;
-}
-
-.story-card-image {
-    transform: scale(.8);
-    transform-origin: 50% 0;
-    object-position: right center;
-    position: relative;
 }
 
 .story-card-animation {
@@ -318,21 +337,17 @@ select {
 }
 
 .story-card2-animation {
-    position: absolute;
     display: flex;
     align-items: center;
-    /* top: 0; */
+    position: absolute;
     bottom: 25%;
-    left: 25%;
     border: 2px solid rgba(255, 255, 255, 0.25);
     border-radius: .75em;
-    width: 50%;
+    width: 67%;
     background-color: #000;
     padding-right: 10px;
     padding-left: 5px;
-    /* margin: 0 auto !important; */
 }
-
 
 .story-card2-animation::after {
     content: "";
@@ -344,13 +359,99 @@ select {
     margin-left: auto;
 }
 
-.story-card2-animation > * {
+.story-card2-animation>* {
     margin: 8px;
 }
 
-
-.story-card-animation-image img{
+.story-card-animation-image img {
     width: 50px;
     height: 75px;
+}
+
+.text-1 {
+    color: #0071EB;
+    font-size: 14.4px;
+    margin-top: 4px;
+}
+
+/* story-card3 */
+.story-card3-animation {
+    position: absolute;
+    transform: scale(.6);
+    background-color: red;
+}
+
+/* faq */
+
+.faq-container {
+    color: white;
+    text-align: center;
     
+    font-size: 3.125rem;
+    margin-top: 75px;
+    font-weight: bold;
+}
+
+.faq-wrapper {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.faq-list {
+    max-width: 815px;
+    display: inline-block;
+    
+}
+
+.faq-list-item {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.faq-answer {
+    font-size: 26px;
+    font-weight: normal;
+    background-color: #303030;
+    text-align: left;
+    /* padding: 1.2em; */
+    line-height: normal;
+    margin-top: 1px;
+}
+
+.faq-answer.closed {
+    /* display: block; */
+    height: 0px;
+    overflow: hidden;
+    transition: max-height .25s cubic-bezier(.5, 0, .1, 1);
+}
+
+.faq-answer.opened {
+    display: block;
+    max-height: 1200px;
+}
+
+.faq-list-item button {
+    border: none;
+    outline: none;
+    background-color:#303030;
+    color: inherit;
+    width: 100%;
+    font-size: 1.625rem;
+    font-weight: 400;
+    padding: .8em 1.3em .8em 1.2em;
+    text-align: left;
+
+    display: flex; /* for after */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between
+}
+
+.faq-list-item button::after {
+    content: "";
+    display: inline-block;
+    background: url("img/plus-icon.png") center center no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
 }

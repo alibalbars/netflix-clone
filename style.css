@@ -48,6 +48,11 @@ body {
     font-family: 'Netflix-sans', 'Helvetica', sans-serif;
 }
 
+/* container */
+.container {
+    background-color: black;
+}
+
 .margin-left-right {
     margin-left: 56px;
     margin-right: 56px;
@@ -76,14 +81,13 @@ select {
 }
 
 .select-wrapper {
-    display: flex;
-    /* width: 100px; */
+    display: inline-flex;
     color: white;
-    border: 0.5px solid white;
+    border: 0.5px solid rgb(170, 170, 170);
     border-radius: 3px;
     outline: none;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
 }
 
 .select-wrapper select {
@@ -93,7 +97,7 @@ select {
     font-size: 14px;
 }
 
-.select-wrapper select option{
+.select-wrapper select option {
     color: black;
     padding: 5px;
     margin: 5px;
@@ -120,7 +124,6 @@ select {
     transform: scale(0.4);
     transform-origin: 50% 50%;
     background-size: cover;
-
     cursor: pointer;
     width: 25px;
     height: 14px;
@@ -193,6 +196,8 @@ select {
 
 .email-input-wrapper {
     margin: auto;
+    color: white;
+    text-align: center;
 }
 
 .email-input-box {
@@ -249,7 +254,7 @@ select {
     outline: none;
 }
 
-.email-input-box button:hover{
+.email-input-box button:hover {
     background-color: rgb(244, 6, 18);
 }
 
@@ -303,7 +308,6 @@ select {
 .story-card-image {
     transform: scale(.8);
     transform-origin: 50% 0;
-    /* object-position: right center; */
     position: relative;
 }
 
@@ -330,7 +334,7 @@ select {
 
 .story-card-animation {
     position: absolute;
-    left: 12.2%;
+    left: 10.8%;
     top: -6%;
     z-index: 1;
     transform: scale(0.78)
@@ -375,6 +379,7 @@ select {
 }
 
 /* story-card3 */
+
 .story-card3-animation {
     position: absolute;
     transform: scale(.6);
@@ -386,21 +391,23 @@ select {
 .faq-container {
     color: white;
     text-align: center;
-    
     font-size: 3.125rem;
-    margin-top: 75px;
+    /* margin-top: 75px; */
+    padding: 70px 0;
     font-weight: bold;
+    border-bottom: 8px solid var(--divider-color);
+
 }
 
 .faq-wrapper {
     text-align: center;
     margin-top: 60px;
+    margin-bottom: 1.2em;
 }
 
 .faq-list {
     max-width: 815px;
     display: inline-block;
-    
 }
 
 .faq-list-item {
@@ -413,13 +420,11 @@ select {
     font-weight: normal;
     background-color: #303030;
     text-align: left;
-    /* padding: 1.2em; */
     line-height: normal;
     margin-top: 1px;
 }
 
 .faq-answer.closed {
-    /* display: block; */
     height: 0px;
     overflow: hidden;
     transition: max-height .25s cubic-bezier(.5, 0, .1, 1);
@@ -433,15 +438,15 @@ select {
 .faq-list-item button {
     border: none;
     outline: none;
-    background-color:#303030;
+    background-color: #303030;
     color: inherit;
     width: 100%;
     font-size: 1.625rem;
     font-weight: 400;
     padding: .8em 1.3em .8em 1.2em;
     text-align: left;
-
-    display: flex; /* for after */
+    display: flex;
+    /* for after */
     flex-direction: row;
     align-items: center;
     justify-content: space-between
@@ -454,4 +459,67 @@ select {
     background-size: cover;
     width: 25px;
     height: 25px;
+}
+
+/* email bottom */
+
+.email-input-container {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+
+}
+
+.email-input-container h3 {
+    padding-bottom: 20px;
+    font-weight: normal;
+}
+
+/* footer */
+
+.footer-container .site-footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #757575;
+    padding: 70px 45px 40px;
+    font-size: 16px;
+}
+
+.site-footer a{
+    color: inherit;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.site-footer a:hover{
+    text-decoration: underline;
+}
+
+.site-footer ul {
+    column-count: 4;
+    margin-top: 30px;
+}
+
+.site-footer ul li {
+    margin-bottom: 16px;
+}
+
+.lang-selection-container {
+    height: 53px;
+}
+
+.lang-selection-container *{
+    height: 100%;
+    outline: none;
+}
+
+.footer-country {
+    font-size: 13px;
+    margin-top: 24px;
+}
+
+.lang-selection-container .select-wrapper {
+    color: rgb(200, 200, 200);
+    border-color: rgb(51, 51, 51);
+    border-width: 1px;
 }
